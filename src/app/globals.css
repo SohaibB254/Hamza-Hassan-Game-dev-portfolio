@@ -1,8 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
-
 @custom-variant dark (&:is(.dark *));
+
+/* Custom Fonts */
+.font-jura {
+  font-family: "Jura";
+  font-weight: 700;
+}
+#hero {
+  background-image: url('../../public/images/bg-image.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 @theme inline {
   --color-background: var(--background);
@@ -55,7 +66,7 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.553 0.195 38.402);
+  --primary: #E08A00;
   --primary-foreground: oklch(0.98 0.016 73.684);
   --secondary: oklch(0.967 0.001 286.375);
   --secondary-foreground: oklch(0.21 0.006 285.885);
