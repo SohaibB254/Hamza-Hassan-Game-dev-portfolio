@@ -3,25 +3,31 @@ import React from "react";
 import Navbar from "../Navbar";
 import { Download, Gamepad2, Store } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 const Hero: React.FC = () => {
   return (
     <>
       <Navbar />
-      <main id="hero"  className=" h-screen flex items-center justify-center gap-8 relative  ">
+      <main id="hero"  className=" animate-in h-screen flex md:flex-row flex-col items-center justify-center md:gap-8 relative md:p-0  ">
         {/* Overlay layer */}
-        <div className="bg-black/40 backdrop-blur-sm absolute h-full w-full z-0"> </div>
+        <div className="bg-black/40 sm:bg-black/70 backdrop-blur-sm absolute h-full w-full z-0"> </div>
         {/* Image Div */}
-        <div className="h-125 w-125 border-4 border-primary sm:block hidden overflow-hidden rounded-full z-10">
-          <img src="/images/dev-image.jpg" alt="" />
+        <div className="md:h-125 h-72 md:w-125 w-72 aspect-square relative border-4 border-primary sm:block hidden overflow-hidden rounded-full z-10">
+          <Image
+           src="/images/dev-image.jpg"
+           fill
+           priority
+           quality={85}
+            alt="Developer image" />
         </div>
         {/* Text & CTA */}
-        <div className=" flex flex-col gap-8 z-10 px-4 sm:items-baseline items-center ">
+        <div className=" flex flex-col gap-8 z-10 px-4 md:items-baseline items-center ">
           <div id="text" className="flex-1">
             <header className="sm:text-6xl text-4xl font-jura text-primary">
               <h1>Hamza Hassan,</h1>
               <h1>Game Developer</h1>
             </header>
-            <p className="text-zinc-300 text-sm italic sm:text-left text-center">I make amazing games in Unity.</p>
+            <p className="text-zinc-300 text-sm italic md:text-left text-center">I make amazing games in Unity.</p>
             {/* Socials */}
           </div>
           {/* Developer stats */}
@@ -46,8 +52,8 @@ const Hero: React.FC = () => {
               <Gamepad2 size={30} />
             </div>
             {/* CTA */}
-          <Button className="sm:text-[20px] text-[16px] p-5 cursor-pointer  text-black">
-            Hire me!
+          <Button className=" text-[16px] p-5 cursor-pointer  text-black">
+            Hire me !
           </Button>
           <Button className='text-[16px] p-5 cursor-pointer sm:hidden text-black  '>Resume <Download/></Button>
             </div>

@@ -6,6 +6,9 @@
 body {
   overflow-x: hidden;
 }
+html {
+  scroll-behavior: smooth;
+}
 /* Custom Fonts */
 .font-jura {
   font-family: "Jura";
@@ -141,6 +144,10 @@ body {
     @apply font-sans;
   }
 }
+/* Custom Gradient */
+.fade-gradient {
+  background :linear-gradient(to right, black 0%, transparent 8%, transparent 92%, black 100%);
+}
 
 /* Custom Animatioon */
 .ticker {
@@ -158,4 +165,14 @@ body {
   to {
     transform: translateX(-50%);
   }
+}
+/* Loading screen animations */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
 }

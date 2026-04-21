@@ -4,7 +4,11 @@ import { Button } from "../ui/button";
 
 const About: React.FC = () => {
   return (
-    <section className="bg-black text-white flex sm:flex-row flex-col justify-center items-stretch  py-10 gap-10 ">
+    <div id="about">
+     <h1 className="sm:text-5xl text-3xl font-jura text-primary pt-30 bg-black text-center">
+        About
+      </h1>
+    <section  className="bg-black text-white flex sm:flex-row flex-col justify-center items-stretch  py-10  gap-10 ">
       <aside className="sm:w-125 flex flex-col gap-10 px-3   ">
         <div className=" flex flex-col gap-2 flex-1">
           <h1 className="text-2xl font-jura text-primary cursor-pointer">
@@ -65,6 +69,7 @@ const About: React.FC = () => {
         </article>
       </section>
     </section>
+    </div>
   );
 };
 

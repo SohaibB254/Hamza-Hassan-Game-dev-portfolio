@@ -10,41 +10,61 @@ interface Game {
 }
 
 const games: Game[] = [
-  { id: 1, title: "Great Warriors", src: "/videos/test.mp4", tags: ["shooter", "fps", "racer"] },
-  { id: 2, title: "Splashing Dash", src: "/videos/test.mp4", tags: ["shooter", "fps", "gun"] },
-  { id: 3, title: "Battle Wars", src: "/videos/test.mp4", tags: ["shooter", "fps", "gun"] },
-  { id: 4, title: "Spring Sprung", src: "/videos/test.mp4", tags: ["shooter", "fps", "gun"] },
-  { id: 5, title: "Doom Fit", src: "/videos/test.mp4", tags: ["shooter", "fps", "gun"] },
+  {
+    id: 1,
+    title: "Great Warriors",
+    src: "/videos/test.mp4",
+    tags: ["shooter", "fps", "racer"],
+  },
+  {
+    id: 2,
+    title: "Splashing Dash",
+    src: "/videos/test.mp4",
+    tags: ["shooter", "fps", "gun"],
+  },
+  {
+    id: 3,
+    title: "Battle Wars",
+    src: "/videos/test.mp4",
+    tags: ["shooter", "fps", "gun"],
+  },
+  {
+    id: 4,
+    title: "Spring Sprung",
+    src: "/videos/test.mp4",
+    tags: ["shooter", "fps", "gun"],
+  },
+  {
+    id: 5,
+    title: "Doom Fit",
+    src: "/videos/test.mp4",
+    tags: ["shooter", "fps", "gun"],
+  },
 ];
 
 const Projects: React.FC = () => {
   return (
-    <div className="py-10 bg-black">
-      <h1 className="sm:text-5xl text-3xl font-jura text-primary py-8 bg-black text-center">
+    <div id="projects" className="py-10 bg-black">
+      <h1 className="sm:text-5xl text-3xl font-jura text-primary py-10 bg-black text-center">
         Projects
       </h1>
 
       <main className="relative overflow-hidden bg-black py-10">
-
         {/*  Fade edges */}
-        <div className="pointer-events-none absolute inset-0 z-10
-  bg-linear-to-r from-black/90 via-transparent to-black/90
-  [linear-gradient(to_right,black_0%,transparent_10%,transparent_90%,black_100%)]" />
+        <div  className="pointer-events-none fade-gradient absolute inset-0 z-10"
+        />
 
         {/*  Scrolling Track */}
-        <div
-          className="flex ticker  gap-6 w-max"
-
-        >
+        <div className="flex ticker  gap-6 w-max">
           {/*  Duplicate content */}
           {[...games, ...games].map((game, index) => (
             <div
               key={index}
-              className="border border-gray-800 bg-black p-3 w-75 sm:w-87.5 md:w-100 shrink-0"
+              className="border border-gray-800 bg-black p-3 w-72 sm:w-87.5 md:w-100 shrink-0"
             >
               <div className="flex flex-col gap-2 text-white">
                 <video
-                  className="w-full h-50 object-cover"
+                  className="w-full h-50 aspect-auto object-cover"
                   src={game.src}
                   autoPlay
                   loop

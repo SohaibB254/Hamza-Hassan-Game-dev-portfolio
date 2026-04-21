@@ -14,15 +14,15 @@ const Services: React.FC = () => {
   ];
 
   return (
-    <>
+    <div id="services" className="bg-black pt-10">
       <h1 className="sm:text-5xl text-3xl font-jura text-primary bg-black text-center pt-8">
         Services
       </h1>
       {/*  Service Cards container */}
-      <div className="bg-black text-zinc-600 flex md:flex-row flex-col justify-center items-center gap-10 py-12">
+      <div className="bg-black text-zinc-600 flex md:flex-row flex-col justify-center items-center gap-4 sm:gap-10 py-12">
        {
         services.map((service) => (
-             <article key={service.id} className="w-80 h-80 bg-[#1e1e1e] border-2 border-primary p-3 sm:p-6 hover:scale-105 hover:shadow-xl hover:shadow-primary/20   transition duration-300 cursor-pointer ">
+             <article key={service.id} className="sm:w-80 sm:h-80 w-64 h-auto bg-[#1e1e1e] border-2 border-primary p-3 sm:p-6 hover:scale-105 hover:shadow-xl hover:shadow-primary/20   transition-all duration-300 cursor-pointer ">
           <h1 className="sm:text-2xl text-xl font-jura text-primary my-4">
             {service.title}
           </h1>
@@ -35,7 +35,7 @@ const Services: React.FC = () => {
         ))
        }
       </div>
-    </>
+    </div>
   );
 };
 
